@@ -50,7 +50,7 @@ sudo nano config.conf
 sudo chmod +x build.sh
 
 # Run build.sh script with specified CUDA architecture flag. This creates the miner executable, xengpuminer. 
-./build.sh -cuda_arch sm_(replace with your card's arch info)
+./build.sh -cuda_arch sm_(replace with your cards arch info)
 https://developer.nvidia.com/cuda-gpus#compute
 
 The xengpuminer and the miner.py script are now ready to execute. Both should be run concurrently.
