@@ -35,19 +35,16 @@ The following section provides a list of commands to set up XenBlocks GPU mining
 
 > **Disclaimer:** Before executing any commands, ensure you have researched and understood what each command does. This setup is intended for Ubuntu systems only. If you are using a rented cloud GPU, make sure that the provider's terms of service allow for cryptocurrency mining.
 
+How to Setup TMUX
 
-### Basic Linux Keyboard Commands:
+| Command | Description |
+| ------- | ----------- |
+| `sudo apt install tmux` | Install tmux terminal multiplexer. |
+| `sudo nano tmux.sh` | Open a new or existing file named tmux.sh in nano for editing. |
+| - | **Paste the provided script into the text editor and save (Ctrl+O to write changes, Ctrl+X to exit nano).** |
+| `sudo chmod +x tmux.sh` | Make the tmux.sh script executable. |
+| `sudo ./tmux.sh` | Execute the tmux.sh script. |
 
-| Command       | Description                                       |
-|---------------|---------------------------------------------------|
-| `Ctrl + C`    | Interrupts the current process/command           |
-| `Ctrl + Z`    | Suspends the current process/command             |
-| `Ctrl + D`    | Logs out of the current session                  |
-| `Ctrl + L`    | Clears the terminal screen                       |
-| `Ctrl + A`    | Moves the cursor to the beginning of the line    |
-| `Ctrl + E`    | Moves the cursor to the end of the line          |
-| `Ctrl + U`    | Deletes all characters before the cursor         |
-| `Ctrl + K`    | Deletes all characters after the cursor          |
 
 TMUX Script
 ```bash
@@ -72,18 +69,6 @@ tmux send-keys -t gpuminer:0.1 './xengpuminer -b 128' C-m
 tmux attach -t gpuminer
 ```
 
-
-| Command | Description |
-| ------- | ----------- |
-| `#!/bin/bash` | Define the interpreter to use for the script. |
-| `tmux new-session -d -s gpuminer` | Create a new tmux session named gpuminer but don't attach to it yet. |
-| `tmux split-window -v` | Split the tmux window vertically, creating two horizontal panes. |
-| `tmux send-keys -t gpuminer:0.0 'python3 miner.py --gpu=true' C-m` | Run the Python miner command in the top pane (pane 0). |
-| `sleep 3` | Pause the script execution for 3 seconds, allowing the Python miner command to start. |
-| `tmux send-keys -t gpuminer:0.1 './xengpuminer -b 128' C-m` | Run the GPU miner command in the bottom pane (pane 1). |
-| `tmux attach -t gpuminer` | Finally, attach to the tmux session, allowing user interaction. |
-
-
 ### Basic tmux Commands:
 
 | Command       | Description                                       |
@@ -101,5 +86,19 @@ tmux attach -t gpuminer
 | `Ctrl + b, &` | Kills the current window                         |
 | `Ctrl + b, x` | Kills the current pane                           |
 | 'tmux kill-server' | Kills all open TMUX sessions
+
+### Basic Linux Keyboard Commands:
+
+| Command       | Description                                       |
+|---------------|---------------------------------------------------|
+| `Ctrl + C`    | Interrupts the current process/command           |
+| `Ctrl + Z`    | Suspends the current process/command             |
+| `Ctrl + D`    | Logs out of the current session                  |
+| `Ctrl + L`    | Clears the terminal screen                       |
+| `Ctrl + A`    | Moves the cursor to the beginning of the line    |
+| `Ctrl + E`    | Moves the cursor to the end of the line          |
+| `Ctrl + U`    | Deletes all characters before the cursor         |
+| `Ctrl + K`    | Deletes all characters after the cursor          |
+
 
 ** More Xenium info at HashHead.io **
