@@ -33,8 +33,6 @@ The following section provides a list of commands to set up XenBlocks GPU mining
 | `sudo chmod +x tmux.sh` | (Optional) Make tmux.sh script executable. |
 | `sudo ./tmux.sh` | (Optional) Execute tmux.sh script. |
 
-> **Disclaimer:** Before executing any commands, ensure you have researched and understood what each command does. This setup is intended for Ubuntu systems only. If you are using a rented cloud GPU, make sure that the provider's terms of service allow for cryptocurrency mining.
-
 How to Setup TMUX
 
 | Command | Description |
