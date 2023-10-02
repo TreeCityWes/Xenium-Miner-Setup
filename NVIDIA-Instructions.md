@@ -36,6 +36,7 @@ sudo pip install -U -r requirements.txt
 
 # Install nano text editor
 sudo apt install nano
+(paste the script below into text editor and save)
 
 # Install NVIDIA CUDA toolkit
 sudo apt install nvidia-cuda-toolkit
