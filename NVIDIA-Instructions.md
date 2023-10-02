@@ -13,7 +13,6 @@ This tutorial guides you through the process of setting up XenBlocks GPU mining 
 
 The following section provides a list of commands to set up XenBlocks GPU mining on a machine running Ubuntu with an NVIDIA GPU. This is not a script to be run all at once, but a step-by-step guide meant to be followed in sequence. Each command is meant to be run individually in your terminal. Ensure you understand the purpose of each command before executing it, particularly if you are new to Linux or terminal commands. This setup primarily prepares your system by updating necessary packages, installing required tools, and setting up the XenBlocks GPU mining software. 
 
-> **Disclaimer:** Before executing any commands, ensure you have researched and understood what each command does. This setup is intended for Ubuntu systems only. If you are using a rented cloud GPU, make sure that the provider's terms of service allow for cryptocurrency mining.
 
 | Command | Description |
 | ------- | ----------- |
@@ -33,6 +32,8 @@ The following section provides a list of commands to set up XenBlocks GPU mining
 | `sudo nano tmux.sh` | (Optional) Open tmux.sh file in nano for editing. Paste the TMUX script below into text editor and save. |
 | `sudo chmod +x tmux.sh` | (Optional) Make tmux.sh script executable. |
 | `sudo ./tmux.sh` | (Optional) Execute tmux.sh script. |
+
+> **Disclaimer:** Before executing any commands, ensure you have researched and understood what each command does. This setup is intended for Ubuntu systems only. If you are using a rented cloud GPU, make sure that the provider's terms of service allow for cryptocurrency mining.
 
 
 ### Basic Linux Keyboard Commands:
