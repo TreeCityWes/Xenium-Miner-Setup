@@ -117,6 +117,8 @@ sudo chmod +x tmux.sh
 
 
 #TMUX Script (single miner)
+
+
 #!/bin/bash
 
 # Create a new tmux session, but don't attach to it yet
