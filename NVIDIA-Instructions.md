@@ -31,21 +31,6 @@ cd XENGPUMiner
 # Install pip for Python 3
 sudo apt-get install python3-pip
 
-# Update package lists and upgrade installed packages
-sudo apt update && apt upgrade -y
-
-# Install git, cmake, make, and sudo packages
-sudo apt install git cmake make sudo -y
-
-# Clone XenGPU Miner repository from GitHub
-sudo git clone https://github.com/shanhaicoder/XENGPUMiner.git
-
-# Change to the cloned XENGPUMiner directory
-cd XENGPUMiner
-
-# Install pip for Python 3
-sudo apt-get install python3-pip
-
 # Install required Python packages from requirements.txt
 sudo pip install -U -r requirements.txt
 
