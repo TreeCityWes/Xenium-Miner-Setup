@@ -71,7 +71,7 @@ sudo nano tmux.sh
 sudo chmod +x tmux.sh
 
 # Execute tmux.sh script
-./tmux.sh
+sudo ./tmux.sh
 
 ### Basic Linux Keyboard Commands:
 
