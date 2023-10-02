@@ -28,7 +28,7 @@ The following section provides a list of commands to set up XenBlocks GPU mining
 | `sudo nano config.conf` | Open config.conf file in nano for editing. |
 | `sudo chmod +x build.sh` | Make the build.sh script executable. |
 | `sudo ./build.sh -cuda_arch sm_(replace with your cards arch info)` | Run build.sh script with specified CUDA architecture flag. This creates the miner executable, xengpuminer. To get the architecture of your card, visit [NVIDIA CUDA GPUs](https://developer.nvidia.com/cuda-gpus#compute) |
-Setup is complete! Now execute both ./xenminergpu and miner.py I recommend using TMUX. 
+| Setup is complete! |Run both ./xenminergpu and miner.py. I recommend using TMUX.|
 
 How to Setup TMUX
 
