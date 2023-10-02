@@ -50,10 +50,8 @@ The following section provides a list of commands to set up XenBlocks GPU mining
 | `Ctrl + K`    | Deletes all characters after the cursor          |
 
 
-
-
+'''bash
 #TMUX Script (single miner)
-
 
 #!/bin/bash
 
@@ -74,6 +72,7 @@ tmux send-keys -t gpuminer:0.1 './xengpuminer -b 128' C-m
 
 # Finally, attach to the tmux session
 tmux attach -t gpuminer
+'''
 
 | Command | Description |
 | ------- | ----------- |
