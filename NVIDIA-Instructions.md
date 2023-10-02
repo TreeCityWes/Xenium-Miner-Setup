@@ -65,7 +65,8 @@ sudo apt install tmux
 
 # Open tmux.sh file in nano for editing
 sudo nano tmux.sh
-** (paste the script below into text editor and save)
+** Paste the script below into text editor and save
+
 # Make tmux.sh script executable
 sudo chmod +x tmux.sh
 
