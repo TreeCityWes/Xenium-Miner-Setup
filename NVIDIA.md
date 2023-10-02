@@ -113,3 +113,4 @@ sudo chmod +x tmux.sh
 | `Ctrl + b, d` | Detaches from the current tmux session           |
 | `Ctrl + b, &` | Kills the current window                         |
 | `Ctrl + b, x` | Kills the current pane                           |
+| 'tmux kill-server' | Kills all open TMUX sessions
