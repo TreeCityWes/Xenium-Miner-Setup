@@ -139,6 +139,5 @@ tmux send-keys -t gpuminer:0.1 './xengpuminer -b 128' C-m
 # Finally, attach to the tmux session
 tmux attach -t gpuminer
 
-2x GPU
-![image](https://github.com/TreeCityWes/Xenium-Miner-Setup/assets/93751858/b24d06df-fd05-416f-a31d-4bdcb1eee30d)
 
+More Xenium info at HashHead.io 
