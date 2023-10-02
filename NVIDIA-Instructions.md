@@ -40,6 +40,7 @@ sudo apt install nano
 
 # Install NVIDIA CUDA toolkit
 sudo apt install nvidia-cuda-toolkit
+**Not required if CUDA is already installed. Do not overwrite if prompted
 
 # Install OpenCL development files
 sudo apt install ocl-icd-opencl-dev
