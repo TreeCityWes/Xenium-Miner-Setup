@@ -11,9 +11,8 @@ This tutorial guides you through the process of setting up XenBlocks GPU mining 
 - **Utilizing `sudo -s`:**
     - If you plan to run multiple commands as the superuser, typing `sudo` for every command can be tedious. Instead, you can switch to the superuser mode by typing `sudo -s`. This command opens a new shell session where you're logged in as the superuser, allowing you to run subsequent commands with superuser privileges without prefixing them with `sudo`.
 
-## Commands to Configure XenBlocks GPU mining
 
-## Script for Setting up XenBlocks GPU mining
+## Setting up XenBlocks GPU mining
 
 The following section provides a list of commands to set up XenBlocks GPU mining on a machine running Ubuntu. This is not a script to be run all at once, but a step-by-step guide meant to be followed in sequence. Each command is meant to be run individually in your terminal. Ensure you understand the purpose of each command before executing it, particularly if you are new to Linux or terminal commands. This setup primarily prepares your system by updating necessary packages, installing required tools, and setting up the XenBlocks GPU mining software. 
 
