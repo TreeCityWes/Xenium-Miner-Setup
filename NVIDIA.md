@@ -1,4 +1,4 @@
-# XenBlocks GPU Mining Setup Guide
+# XenBlocks Xenium NVIDIA GPU Mining Setup Guide
 
 This tutorial guides you through the process of setting up XenBlocks GPU mining using a cloud GPU miner on Ubuntu. Before diving into the script, ensure you have a basic understanding of user permissions and the `sudo` command in Linux. 
 
