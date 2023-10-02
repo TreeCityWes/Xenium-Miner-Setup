@@ -49,23 +49,7 @@ The following section provides a list of commands to set up XenBlocks GPU mining
 | `Ctrl + U`    | Deletes all characters before the cursor         |
 | `Ctrl + K`    | Deletes all characters after the cursor          |
 
-### Basic tmux Commands:
 
-| Command       | Description                                       |
-|---------------|---------------------------------------------------|
-| `tmux`        | Starts a new tmux session                        |
-| `tmux ls`     | Lists all tmux sessions                          |
-| `tmux attach -t 0` | Attaches to tmux session 0                  |
-| `Ctrl + b, "` | Splits the pane horizontally                     |
-| `Ctrl + b, %` | Splits the pane vertically                       |
-| `Ctrl + b, o` | Switches between panes                           |
-| `Ctrl + b, c` | Creates a new window                             |
-| `Ctrl + b, n` | Moves to the next window                         |
-| `Ctrl + b, p` | Moves to the previous window                     |
-| `Ctrl + b, d` | Detaches from the current tmux session           |
-| `Ctrl + b, &` | Kills the current window                         |
-| `Ctrl + b, x` | Kills the current pane                           |
-| 'tmux kill-server' | Kills all open TMUX sessions
 
 
 #TMUX Script (single miner)
@@ -91,5 +75,33 @@ tmux send-keys -t gpuminer:0.1 './xengpuminer -b 128' C-m
 # Finally, attach to the tmux session
 tmux attach -t gpuminer
 
+| Command | Description |
+| ------- | ----------- |
+| `#!/bin/bash` | Define the interpreter to use for the script. |
+| `tmux new-session -d -s gpuminer` | Create a new tmux session named gpuminer but don't attach to it yet. |
+| `tmux split-window -v` | Split the tmux window vertically, creating two horizontal panes. |
+| `tmux send-keys -t gpuminer:0.0 'python3 miner.py --gpu=true' C-m` | Run the Python miner command in the top pane (pane 0). |
+| `sleep 3` | Pause the script execution for 3 seconds, allowing the Python miner command to start. |
+| `tmux send-keys -t gpuminer:0.1 './xengpuminer -b 128' C-m` | Run the GPU miner command in the bottom pane (pane 1). |
+| `tmux attach -t gpuminer` | Finally, attach to the tmux session, allowing user interaction. |
 
-More Xenium info at HashHead.io 
+
+### Basic tmux Commands:
+
+| Command       | Description                                       |
+|---------------|---------------------------------------------------|
+| `tmux`        | Starts a new tmux session                        |
+| `tmux ls`     | Lists all tmux sessions                          |
+| `tmux attach -t 0` | Attaches to tmux session 0                  |
+| `Ctrl + b, "` | Splits the pane horizontally                     |
+| `Ctrl + b, %` | Splits the pane vertically                       |
+| `Ctrl + b, o` | Switches between panes                           |
+| `Ctrl + b, c` | Creates a new window                             |
+| `Ctrl + b, n` | Moves to the next window                         |
+| `Ctrl + b, p` | Moves to the previous window                     |
+| `Ctrl + b, d` | Detaches from the current tmux session           |
+| `Ctrl + b, &` | Kills the current window                         |
+| `Ctrl + b, x` | Kills the current pane                           |
+| 'tmux kill-server' | Kills all open TMUX sessions
+
+** More Xenium info at HashHead.io **
