@@ -7,7 +7,7 @@ This tutorial guides you through the process of setting up XenBlocks GPU mining 
 - **Understanding `sudo`:**
     - `sudo` stands for "superuser do," allowing a user to run commands with administrative privileges temporarily. When you prepend a command with `sudo`, you're telling the system to execute that command as the superuser (or an administrative user).
 - **Permissions:**
-    - Permissions dictate who can read, write, or execute files and directories. The `chmod` command is used to change these permissions. For example, `sudo chmod +x build.sh` makes the `build.sh` script executable.
+    - Permissions dictate who can read, write, or execute files and directories. Make sure you are executing commands as a user that has permission. Scripts also need to be made executable to run them. For example, `sudo chmod +x build.sh` allows the `build.sh` script to be executable.
 - **Utilizing `sudo -s`:**
     - If you plan to run multiple commands as the superuser, typing `sudo` for every command can be tedious. Instead, you can switch to the superuser mode by typing `sudo -s`. This command opens a new shell session where you're logged in as the superuser, allowing you to run subsequent commands with superuser privileges without prefixing them with `sudo`.
 
