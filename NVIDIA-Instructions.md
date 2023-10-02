@@ -8,9 +8,6 @@ This tutorial guides you through the process of setting up XenBlocks GPU mining 
     - `sudo` stands for "superuser do," allowing a user to run commands with administrative privileges temporarily. When you prepend a command with `sudo`, you're telling the system to execute that command as the superuser (or an administrative user).
 - **Permissions:**
     - Permissions dictate who can read, write, or execute files and directories. Make sure you are executing commands as a user that has permission. Scripts also need to be made executable to run them. For example, `sudo chmod +x build.sh` allows the `build.sh` script to be executable.
-- **Utilizing `sudo -s`:**
-    - If you plan to run multiple commands as the superuser, typing `sudo` for every command can be tedious. Instead, you can switch to the superuser mode by typing `sudo -s`. This command opens a new shell session where you're logged in as the superuser, allowing you to run subsequent commands with superuser privileges without prefixing them with `sudo`.
-
 
 ## Setting up XenBlocks GPU mining
 
@@ -117,3 +114,29 @@ sudo chmod +x tmux.sh
 | `Ctrl + b, &` | Kills the current window                         |
 | `Ctrl + b, x` | Kills the current pane                           |
 | 'tmux kill-server' | Kills all open TMUX sessions
+
+
+#TMUX Script (single miner)
+#!/bin/bash
+
+# Create a new tmux session, but don't attach to it yet
+tmux new-session -d -s gpuminer
+
+# Split the window horizontally
+tmux split-window -v
+
+# Run the Python miner command in the top pane (pane 0)
+tmux send-keys -t gpuminer:0.0 'python3 miner.py --gpu=true' C-m
+
+# Wait for 3 seconds
+sleep 3
+
+# Run the GPU miner command in the bottom pane (pane 1)
+tmux send-keys -t gpuminer:0.1 './xengpuminer -b 128' C-m
+
+# Finally, attach to the tmux session
+tmux attach -t gpuminer
+
+2x GPU
+![image](https://github.com/TreeCityWes/Xenium-Miner-Setup/assets/93751858/b24d06df-fd05-416f-a31d-4bdcb1eee30d)
+
