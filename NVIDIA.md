@@ -34,7 +34,6 @@ cd XENGPUMiner
 # Install pip for Python 3
 sudo apt-get install python3-pip
 
-```bash
 # Update package lists and upgrade installed packages
 sudo apt update && apt upgrade -y
 
@@ -68,9 +67,10 @@ sudo nano config.conf
 # Make the build.sh script executable
 sudo chmod +x build.sh
 
-# Run build.sh script with specified CUDA architecture flag
+# Run build.sh script with specified CUDA architecture flag. This creates the miner executable, xengpuminer. 
 ./build.sh -cuda_arch sm_86
 
+The xengpuminer and the miner.py script are now ready to execute. Both should be run concurrently. There are several methods to running such as individual sessions or using Screen to toggle screens.My favorite is the TMUX script below. 
 (Optional - Create TMUX Script)
 # Install tmux terminal multiplexer
 sudo apt install tmux
