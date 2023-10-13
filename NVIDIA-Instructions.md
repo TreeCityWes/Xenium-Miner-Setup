@@ -21,7 +21,7 @@ The following section provides a list of commands to set up XenBlocks GPU mining
 | `sudo git clone https://github.com/shanhaicoder/XENGPUMiner.git` | Clone XenGPU Miner repository from GitHub. |
 | `cd XENGPUMiner` | Change to the cloned XENGPUMiner directory. |
 | `sudo apt-get install python3-pip` | Install pip for Python 3. |
-| `sudo pip install -U -r requirements.txt` | Install required Python packages from requirements.txt. |
+| `sudo pip3 install -U -r requirements.txt` | Install required Python packages from requirements.txt. |
 | `sudo apt install nano` | Install nano text editor. |
 | `sudo apt install nvidia-cuda-toolkit` | Install NVIDIA CUDA toolkit. Not required if CUDA is already installed. Do not overwrite if prompted. |
 | `sudo apt install ocl-icd-opencl-dev` | Install OpenCL development files. |
