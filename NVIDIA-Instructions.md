@@ -1,5 +1,8 @@
 # XenBlocks Xenium NVIDIA GPU Mining Setup Guide
 
+Vast.ai GPU Rental: https://cloud.vast.ai/?ref_id=88736
+
+
 This tutorial guides you through the process of setting up XenBlocks GPU mining using a cloud GPU miner on Ubuntu. Before diving into the script, ensure you have a basic understanding of user permissions and the `sudo` command in Linux. 
 
 - **User Context:** 
